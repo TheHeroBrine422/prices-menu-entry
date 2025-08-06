@@ -18,7 +18,7 @@ import net.runelite.client.util.LinkBrowser;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Menu Prices Entry"
 )
 public class MenuPricesPlugin extends Plugin
 {
@@ -26,21 +26,18 @@ public class MenuPricesPlugin extends Plugin
 	private Client client;
 
 	@Inject
-	private MenuPricesConfig config;
-
-	@Inject
 	private ItemManager itemManager;
 
 	@Override
 	protected void startUp() throws Exception
 	{
-		log.info("Example started!");
+		log.info("Prices Menu Entry started!");
 	}
 
 	@Override
 	protected void shutDown() throws Exception
 	{
-		log.info("Example stopped!");
+		log.info("Prices Menu Entry stopped!");
 	}
 
 	@Subscribe
@@ -65,11 +62,5 @@ public class MenuPricesPlugin extends Plugin
 				}
 			}
 		}
-	}
-
-	@Provides
-	MenuPricesConfig provideConfig(ConfigManager configManager)
-	{
-		return configManager.getConfig(MenuPricesConfig.class);
 	}
 }
