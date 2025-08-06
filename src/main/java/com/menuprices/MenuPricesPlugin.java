@@ -18,7 +18,7 @@ import net.runelite.client.util.LinkBrowser;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Menu Prices Entry"
+	name = "Prices Menu Entry"
 )
 public class MenuPricesPlugin extends Plugin
 {
