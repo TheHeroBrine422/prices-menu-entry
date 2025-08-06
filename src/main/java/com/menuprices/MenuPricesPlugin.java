@@ -47,10 +47,9 @@ public class MenuPricesPlugin extends Plugin
 		for (int idx = entries.length - 1; idx >= 0; --idx)
 		{
 			final MenuEntry entry = entries[idx];
-			final Widget w = entry.getWidget();
 			final int canonItemId = itemManager.canonicalize(entry.getItemId());
 
-			if (w != null && WidgetUtil.componentToInterface(w.getId()) == InterfaceID.INVENTORY && "Examine".equals(entry.getOption()) && entry.getIdentifier() == 10) {
+			if ("Examine".equals(entry.getOption()) && entry.getIdentifier() == 10) {
 				if (itemManager.getItemComposition(canonItemId).isTradeable()) {
 					client.getMenu().createMenuEntry(idx)
 						.setOption("Open Wiki Prices")
